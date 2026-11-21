@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>本邦研修2026 小布施町視察 · Training in Japan 2026 · Obuse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  /* 24日資料と同じ栗色ベース */
+  --bg:#FBF5EA; --side:#4A2E1F; --card:#FFFDF8; --card2:#F3E8D6; --line:#D9C9B0;
+  --ink:#4A2E1F; --dim:#6E4F3A; --mute:#8A6A4F; --acc:#B04E17; --coral:#B04E17; --gold:#B8860B;
+  --on-acc:#fff; --field:#fff;
+  --c1:#B8860B; --c2:#2F6DB5; --c3:#2E7D5B; --c4:#B8447A; --c5:#7A55B8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Inter','Noto Sans Bengali','Noto Sans JP',system-ui,sans-serif;
+  -webkit-text-size-adjust:100%;line-height:1.7}
+body[data-lang="bn"]{font-family:'Noto Sans Bengali','Inter',system-ui,sans-serif;line-height:1.85}
+body[data-lang="ja"]{font-family:'Noto Sans JP','Inter',system-ui,sans-serif}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.app{display:grid;grid-template-columns:270px 1fr;min-height:100vh}
+.side{--ink:#FBF5EA;--dim:#E3D2B8;color:var(--ink);background:var(--side);padding:22px 16px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;gap:10px;align-items:flex-start;margin-bottom:18px}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--coral);flex:none;margin-top:6px}
+.brand small{display:block;color:var(--dim);font-size:12px;font-weight:600;letter-spacing:.02em}
+.brand b{font-size:19px}
+.lang{display:flex;gap:4px;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:999px;padding:4px;width:max-content;margin-bottom:16px}
+.lang button{border:0;background:none;border-radius:999px;padding:7px 14px;font-weight:600;color:var(--dim);min-height:38px}
+.lang button.on{background:#FBF5EA;color:var(--side)}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav button{text-align:left;border:0;background:none;color:var(--dim);padding:11px 14px;border-radius:12px;font-size:15px;line-height:1.4}
+.nav button:hover{background:rgba(255,255,255,.08)}
+.nav button.on{background:#FBF5EA;color:var(--side);font-weight:700}
+.nav .sep{height:1px;background:var(--line);margin:8px 6px}
+.main{padding:34px clamp(18px,4vw,64px) 90px;max-width:1000px;width:100%}
+h1{font-size:clamp(26px,4vw,38px);margin:0 0 6px;line-height:1.3}
+h1:before{content:"";display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--coral);margin-right:12px;vertical-align:middle}
+h2{font-size:21px;margin:30px 0 10px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h3{font-size:17px;margin:18px 0 6px}
+p{margin:8px 0;color:var(--dim)}
+.lead{font-size:17px;color:var(--dim);max-width:760px}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13px;color:var(--dim);margin-right:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:0 1px 0 rgba(74,46,31,.05)}
+.card h3{margin-top:0}
+.card.link{cursor:pointer;transition:.15s}
+.card.link:hover{border-color:var(--acc);transform:translateY(-1px)}
+.time{color:var(--acc);font-weight:700;font-size:14px;letter-spacing:.03em}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--acc);background:transparent;color:var(--acc);
+  border-radius:12px;padding:11px 18px;font-weight:700;text-decoration:none;min-height:46px}
+.btn:hover{background:var(--acc);color:var(--on-acc)}
+.btn.solid{background:var(--acc);color:var(--on-acc)}
+.btn.off{border-color:var(--line);color:var(--mute);pointer-events:none;border-style:dashed}
+.note{border-left:4px solid var(--gold);background:var(--card2);padding:10px 16px;border-radius:0 12px 12px 0;color:var(--dim);font-size:15px}
+.big{font-size:19px;line-height:1.7}
+ul.pts{padding-left:22px;margin:8px 0}
+ul.pts li{margin:6px 0}
+.kw dt{font-weight:700;font-size:18px;color:var(--acc);margin-top:18px}
+.kw dd{margin:4px 0 0}
+.draft{font-size:12px;color:var(--gold);border:1px dashed var(--gold);border-radius:6px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+/* form */
+.form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin:14px 0 8px}
+.form label{display:block;font-size:14px;color:var(--dim);margin:14px 0 6px;font-weight:600}
+.form label:first-child{margin-top:0}
+.form select,.form input,.form textarea{width:100%;background:var(--field);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:17px;min-height:48px}
+.form textarea{min-height:130px;resize:vertical}
+.form select:focus,.form input:focus,.form textarea:focus{outline:none;border-color:var(--acc)}
+.hint{font-size:13px;color:var(--mute);margin-top:6px}
+.msg{margin-top:12px;min-height:24px;font-weight:600}
+.msg.ok{color:var(--acc)} .msg.err{color:var(--coral)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{border:1.5px solid var(--line);background:none;border-radius:999px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--dim);min-height:40px}
+.chip.on{background:var(--side);color:#FBF5EA;border-color:var(--side)}
+.q{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:14px;padding:16px 20px;margin:12px 0}
+.q .who{font-size:13px;font-weight:700;color:var(--c);letter-spacing:.02em}
+.q .m{font-size:20px;margin:6px 0 2px;line-height:1.65;white-space:pre-wrap}
+.q .s{font-size:14px;color:var(--mute);white-space:pre-wrap;border-top:1px dashed var(--line);padding-top:6px;margin-top:6px}
+.q .s b{font-weight:700;color:var(--dim);margin-right:6px;font-size:11px;letter-spacing:.08em}
+.nav .btn{width:max-content;border-color:#E3D2B8;color:#FBF5EA}
+.nav .btn:hover{background:#FBF5EA;color:var(--side)}
+.q .rx-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.rx{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:5px 13px;font-size:16px;min-height:40px;line-height:1}
+.rx span{font-size:14px;font-weight:700;color:var(--mute);min-width:.8em;text-align:left}
+.rx:hover{border-color:var(--acc)}
+.rx.mine{background:#FBE9DA;border-color:var(--acc)}
+.rx.mine span{color:var(--acc)}
+.rx.pop{animation:pop .25s}
+@keyframes pop{50%{transform:scale(1.18)}}
+.rpl-btn{margin-left:auto;border:1.5px solid var(--line);background:none;border-radius:999px;padding:5px 14px;font-size:14px;font-weight:600;color:var(--dim);min-height:40px}
+.rpl-btn:hover,.rpl-btn.on{border-color:var(--acc);color:var(--acc)}
+.thread{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.rp{background:var(--card2);border-radius:12px;padding:10px 14px;margin:8px 0}
+.rp .who{font-size:12px;font-weight:700;color:var(--mute)}
+.rp .m{font-size:16px;margin:2px 0 0;line-height:1.6;white-space:pre-wrap}
+.rp .s{font-size:13px;color:var(--mute);white-space:pre-wrap;border-top:1px dashed var(--line);padding-top:4px;margin-top:4px}
+.rp .s b{font-size:10px;letter-spacing:.08em;margin-right:6px;color:var(--dim)}
+.rform{display:grid;gap:8px;margin-top:10px}
+.rform select,.rform textarea{width:100%;background:var(--field);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;font-size:16px;min-height:44px}
+.rform textarea{min-height:76px;resize:vertical}
+.rform select:focus,.rform textarea:focus{outline:none;border-color:var(--acc)}
+.rform .btn{justify-self:start;min-height:42px;padding:8px 16px}
+.rform .rmsg{font-size:14px;font-weight:600;color:var(--coral)}
+.empty{color:var(--mute);padding:26px 0}
+.steps{display:grid;gap:12px;margin:12px 0;counter-reset:st}
+.step{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.step i{counter-increment:st;font-style:normal;width:40px;height:40px;border-radius:50%;background:var(--acc);color:var(--on-acc);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step i:before{content:counter(st)}
+.step b{display:block;font-size:17px;margin-bottom:2px}
+.step span{color:var(--dim)}
+.gpanel{margin:14px 0}
+.gpanel details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0}
+.gpanel summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:17px}
+.gpanel .gb{padding:0 20px 16px}
+.gpanel .gb p{margin:8px 0}
+.gpanel .gb p.sub{padding-left:18px}
+.gpanel .gb p.hd{font-weight:700;color:var(--acc);margin-top:16px}
+.btn.tg{cursor:pointer;background:transparent}
+.btn.tg.on{background:var(--acc);color:var(--on-acc)}
+.footer{margin-top:50px;color:var(--mute);font-size:13px}
+@media (max-width:820px){
+  .app{display:block}
+  .side{position:static;height:auto;padding:14px}
+  .brand{margin-bottom:10px}
+  .nav{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px}
+  .nav button{white-space:nowrap;border:1px solid var(--line);padding:9px 14px}
+  .nav .sep{display:none}
+  .main{padding:22px 16px 80px}
+}
+</style>
+</head>
+<body data-lang="bn">
+<div class="app">
+  <aside class="side">
+    <div class="brand"><span class="dot"></span><div><small id="brandSub"></small><b id="brandTitle"></b></div></div>
+    <div class="lang" id="langBox"></div>
+    <nav class="nav" id="nav"></nav>
+  </aside>
+  <main class="main" id="main"></main>
+</div>
+
+<script src="config.js"></script>
+<script>
+/* ═══════════════════ 文言(3言語) ═══════════════════ */
+var L = {
+bn:{ name:"বাংলা",
+ brandSub:"জাইকা গ্রাসরুটস প্রযুক্তিগত সহযোগিতা প্রকল্প · জাপানে প্রশিক্ষণ", brandTitle:"জাপানে প্রশিক্ষণ 2026 · ওবুসে পরিদর্শন",
+ nav:{home:"সূচনা", ob:"ওবুসে শহর পরিচিতি", d24:"24 নভেম্বর", am:"25 নভেম্বর · সকাল", pm:"25 নভেম্বর · বিকাল", eve:"25 নভেম্বর · সন্ধ্যা", q:"প্রশ্ন ও উত্তর বোর্ড", kw:"মূল শব্দ"},
+ soon:"শীঘ্রই আসছে", open:"খুলুন",
+ homeT:"প্রি-ভিজিট সামগ্রী", homeLead:"24 ও 25 নভেম্বরের জন্য প্রস্তুতি সামগ্রী। যাওয়ার আগে একবার দেখে নিন।",
+ d24T:"24 নভেম্বর", d24Sub:"ওবুসে যাওয়ার আগের ব্রিফিং", d24Body:"পরের দিনের বিদ্যালয় পরিদর্শনের আগে এই ব্রিফিংয়ে ওবুসের শিক্ষা-কাজ ও আইসিটি ব্যবহারের পটভূমি জানানো হবে।", d24Btn:"24 নভেম্বরের উপস্থাপনা",
+ amT:"25 নভেম্বর · সকাল", amSub:"নিম্ন মাধ্যমিক বিদ্যালয় · তৃতীয় বর্ষ (নবম শ্রেণি) · বিজ্ঞান", amBody:"শ্রেণিকক্ষ পর্যবেক্ষণের আগে পাঠ্যক্রম নির্দেশিকার অংশ ও ওয়ার্কশিট দেখে নিন।", amG:"পাঠ্যক্রম নির্দেশিকা (অংশ)", amW:"ওয়ার্কশিট", amUnit:"বিষয়", amUnitV:"পৃথিবী ও মহাকাশ: সূর্য, পৃথিবী ও চাঁদের আকার ও দূরত্ব", amAct:"ওয়ার্কশিটে যা করা হয়", amActV:"সূর্য, পৃথিবী ও চাঁদের প্রকৃত আকার ও দূরত্বকে 580 কোটি ভাগের 1 ভাগে ছোট করে হিসাব করা হয়। নিজের আঁকা ধারণার ছবির সঙ্গে হিসাবের ফল তুলনা করে নতুন প্রশ্ন লেখা হয়।",
+ pmT:"25 নভেম্বর · বিকাল", pmSub:"প্রাথমিক বিদ্যালয় · ষষ্ঠ শ্রেণি · গণিত",
+ unit:"ইউনিট", unitV:"বৃত্তের ক্ষেত্রফল (6টি পাঠের 3য় পাঠ)", aim:"এই পাঠের লক্ষ্য", aimV:"পরিচিত (আগে শেখা) আকারে রূপান্তর করে ক্ষেত্রফল নির্ণয় করা যায়।", view:"ইউনিট জুড়ে যে দৃষ্টিভঙ্গি ও চিন্তাপদ্ধতি কাজে লাগাতে চাই", viewV:"আগে শেখা আকৃতিতে রূপান্তর করা।",
+ slides:"শিখন নির্দেশিকা (স্লাইড)", slidesNote:"ভাষা বেছে নিলে ওই ভাষার প্রথম স্লাইড থেকে শুরু হবে।", refl:"রিফ্লেকশন শিট (সবার জন্য এক)", reflNote:"ব্যক্তিগত তথ্য বাদ দিয়ে তৈরি।",
+ eveT:"25 নভেম্বর · সন্ধ্যা", eveSub:"মতবিনিময়", eveTalk:"শিক্ষকের বক্তব্য (প্রায় 15 মিনিট)",
+ eveP:["পুরো পাঠের উদ্দেশ্য (একটি পাঠ নয়, বছরজুড়ে বা ইউনিটের বড় দৃষ্টিকোণ থেকে)","আইসিটি কোথায় ও কীভাবে ব্যবহার করা হয়","শিক্ষকের ভূমিকার পরিবর্তন","কৌশল ও চ্যালেঞ্জ"],
+ eveQ:"প্রশ্নোত্তর", eveQB:"আপনার প্রশ্ন নিচের বোর্ডে লিখুন। বাংলায় লিখলে ইংরেজি ও জাপানিতে অনুবাদ হয়ে শিক্ষক সরাসরি দেখতে পারবেন।", eveBtn:"প্রশ্ন লিখুন / বোর্ড দেখুন",
+ qT:"প্রশ্ন ও উত্তর বোর্ড", qLead:"বাংলায় লিখুন। ইংরেজি ও জাপানি অনুবাদ নিজে থেকেই হবে।",
+ fName:"আপনার নাম", fTarget:"কাকে প্রশ্ন?", fText:"প্রশ্ন", fSend:"পাঠান", fHint:"ফোনের কিবোর্ডের মাইক্রোফোন (🎤) চাপলে মুখে বলেও লিখতে পারবেন।",
+ fOk:"পাঠানো হয়েছে। ধন্যবাদ।", fErr:"পাঠানো যায়নি। ইন্টারনেট দেখে আবার চেষ্টা করুন।", fNeed:"নাম, কাকে প্রশ্ন এবং প্রশ্ন—তিনটিই দিন।", fSel:"নির্বাচন করুন",
+ all:"সব", rpl:"উত্তর", rplPh:"উত্তর বা মন্তব্য লিখুন", rplSend:"পাঠান", rplNeed:"নাম ও লেখা দিন।", rplErr:"পাঠানো যায়নি। আবার চেষ্টা করুন।", rxTip:{"👍":"সমর্থন / আমিও শুনতে চাই"}, rxHint:"👍 = আমি একমত / আমিও এটি শুনতে চাই", back:"পোর্টালে ফিরে যান", sep:"আলাদা পেজে খুলুন", boardT:"সব প্রশ্ন", none:"এখনো কোনো প্রশ্ন নেই।", refresh:"নতুন প্রশ্ন নিজে থেকেই আসে।", orig:"মূল",
+ kwT:"মূল শব্দ", kwNote:"খসড়া ব্যাখ্যা—অনুবাদ দেখে নিন।",
+ kw:[
+  {t:"ডিজিটাল শিখন ভিত্তি (Digital Learning Infrastructure)", d:"স্কুলে ডিজিটালভাবে শেখার ভিত্তি হিসেবে কাজ করা পরিবেশ ও ব্যবস্থার সামগ্রিক নাম—প্রত্যেক শিশুর জন্য একটি ডিভাইস, দ্রুতগতির নেটওয়ার্ক, এবং ক্লাউডভিত্তিক শিক্ষাসরঞ্জাম ও তথ্য।"},
+  {t:"স্বগতিতে শিখন (Self-paced learning / জিইউ শিন্দো গাকুশু)", d:"এমন শেখার পদ্ধতি যেখানে শিশুরা নিজেরাই পড়ার পরিকল্পনা করে—কী শিখবে, কোন ক্রমে এবং কত গতিতে শিখবে তা নিজেরা ঠিক করে। শিক্ষক সবাইকে একসঙ্গে পড়ানোর ভূমিকা থেকে প্রত্যেক শিশুর শেখাকে সহায়তা করার ভূমিকায় যান।"}
+ ],
+ foot:"সামগ্রী হালনাগাদ হতে পারে। এই পাতার ঠিকানা বদলাবে না।"
+},
+en:{ name:"EN",
+ brandSub:"JICA Partnership Program · Training in Japan", brandTitle:"Training in Japan 2026 · Obuse Town Visit",
+ nav:{home:"Start", ob:"About Obuse Town", d24:"24 Nov", am:"25 Nov · Morning", pm:"25 Nov · Afternoon", eve:"25 Nov · Evening", q:"Questions board", kw:"Key terms"},
+ soon:"Coming soon", open:"Open",
+ homeT:"Pre-visit materials", homeLead:"Preparation materials for 24 and 25 November. Please look through them before the visit.",
+ d24T:"24 November", d24Sub:"Briefing before the Obuse visit", d24Body:"This briefing gives the background to education and ICT use in Obuse before the school visit the next day.", d24Btn:"24 Nov presentation",
+ amT:"25 Nov · Morning", amSub:"Lower secondary school · Grade 9 · Science", amBody:"Please look at the curriculum guideline extract and the worksheet before the lesson observation.", amG:"Curriculum guideline (extract)", amW:"Worksheet", amUnit:"Topic", amUnitV:"Earth and Space: sizes and distances of the Sun, Moon and Earth", amAct:"What the worksheet asks", amActV:"Students scale the actual sizes and distances of the Sun, Earth and Moon down to 1/5.8 billion and calculate them. They compare the result with their own drawn image and write new questions.",
+ pmT:"25 Nov · Afternoon", pmSub:"Primary school · Grade 6 · Mathematics",
+ unit:"Unit", unitV:"Area of a Circle (lesson 3 of 6)", aim:"Aim of this lesson", aimV:"Students can find the area by transforming the figure back into a shape they already know.", view:"Way of seeing and thinking to build across the unit", viewV:"Transforming a figure into one already learned.",
+ slides:"Learning guide (slides)", slidesNote:"Choose a language and the slides open at that language's first page.", refl:"Reflection sheet (shared)", reflNote:"Personal information removed.",
+ eveT:"25 Nov · Evening", eveSub:"Exchange of views", eveTalk:"Talk by the teacher (about 15 minutes)",
+ eveP:["Aim of the whole lesson (from the big picture of the unit or the whole year, not one lesson)","Where and how ICT is used","How the teacher's role has changed","Ingenuity and challenges"],
+ eveQ:"Q&A", eveQB:"Write your question on the board below. If you write in Bengali, it is translated into English and Japanese so the teacher can read it directly.", eveBtn:"Write a question / see the board",
+ qT:"Questions board", qLead:"Write in Bengali. English and Japanese translations are added automatically.",
+ fName:"Your name", fTarget:"Question for", fText:"Question", fSend:"Send", fHint:"You can also speak: tap the microphone (🎤) on your phone keyboard.",
+ fOk:"Sent. Thank you.", fErr:"Could not send. Check your connection and try again.", fNeed:"Please fill in name, who the question is for, and the question.", fSel:"Select",
+ all:"All", rpl:"Reply", rplPh:"Write a reply or comment", rplSend:"Send", rplNeed:"Please choose your name and write something.", rplErr:"Could not send. Please try again.", rxTip:{"👍":"I agree / I want to hear this too"}, rxHint:"👍 = I agree / I want to hear this too", back:"Back to portal", sep:"Open as a separate page", boardT:"All questions", none:"No questions yet.", refresh:"New questions appear automatically.", orig:"Original",
+ kwT:"Key terms", kwNote:"Draft explanations. Please check.",
+ kw:[
+  {t:"Digital learning infrastructure", d:"The overall environment and systems that make digital learning at school possible: one device per child, high-speed networks, and cloud-based learning tools and data."},
+  {t:"Self-paced learning (Jiyu Shindo Gakushu)", d:"A way of learning in which children plan their own study, choosing what to learn, in what order and at what pace. The teacher shifts from teaching everyone at once to supporting each child's learning."}
+ ],
+ foot:"Materials may be updated. The address of this page will not change."
+},
+ja:{ name:"日本語",
+ brandSub:"JICA草の根技術協力事業・本邦研修", brandTitle:"本邦研修2026 小布施町視察",
+ nav:{home:"はじめに", ob:"小布施町とは", d24:"11月24日", am:"11月25日 午前", pm:"11月25日 午後", eve:"11月25日 夕方", q:"質問ボード", kw:"キーワード集"},
+ soon:"準備中", open:"開く",
+ homeT:"事前資料", homeLead:"11月24日・25日の事前資料です。訪問日の前に目を通しておいてください。",
+ d24T:"11月24日", d24Sub:"小布施訪問前のブリーフィング", d24Body:"翌日の学校訪問の前に、小布施町の教育とICT活用の背景を共有します。", d24Btn:"24日の資料",
+ amT:"11月25日 午前", amSub:"中学校 3年 理科", amBody:"授業参観の前に、学習指導要領の抜粋とワークシートに目を通してください。", amG:"学習指導要領(抜粋)", amW:"ワークシート", amUnit:"内容", amUnitV:"地球と宇宙:太陽・地球・月の大きさと距離", amAct:"ワークシートの流れ", amActV:"太陽・地球・月の実際の大きさと距離を58億分の1にして計算します。自分が描いたイメージ絵と計算結果を比べ、新たな疑問・問いを書きます。",
+ pmT:"11月25日 午後", pmSub:"小学校 6年 算数",
+ unit:"単元", unitV:"円の面積(6時間扱いの3時間目)", aim:"本時のねらい", aimV:"既習の形に戻すことで、面積を求めることができる。", view:"単元を通して活かしたい見方・考え方", viewV:"既習の図形に変形すること。",
+ slides:"学びの手引き(スライド)", slidesNote:"言語を選ぶと、その言語の1枚目から開きます。", refl:"振り返りシート(共通)", reflNote:"個人情報を除いたものです。",
+ eveT:"11月25日 夕方", eveSub:"意見交換", eveTalk:"授業者のお話(15分程度)",
+ eveP:["授業全体のねらい(本時というより、単元や1年間全体という大きな視点で)","ICTをどこで、どのように使っているか","教師の役割の変化","工夫と課題"],
+ eveQ:"質疑応答", eveQB:"質問は下のボードに書いてください。ベンガル語で書くと、英語と日本語に翻訳され、授業者が直接読めます。", eveBtn:"質問を書く・ボードを見る",
+ qT:"質問ボード", qLead:"ベンガル語で書いてください。英語と日本語に自動で翻訳されます。",
+ fName:"お名前", fTarget:"誰への質問ですか", fText:"質問", fSend:"送信", fHint:"スマホのキーボードのマイク(🎤)を押すと、声でも入力できます。",
+ fOk:"送信しました。ありがとうございます。", fErr:"送信できませんでした。通信を確認して、もう一度試してください。", fNeed:"名前・質問の相手・質問の3つを入れてください。", fSel:"選択してください",
+ all:"すべて", rpl:"返信", rplPh:"返信・コメントを書く", rplSend:"送信", rplNeed:"名前を選んで、内容を書いてください。", rplErr:"送信できませんでした。もう一度お試しください。", rxTip:{"👍":"賛成・私も聞きたい"}, rxHint:"👍 = 賛成・私も聞きたい", back:"ポータルに戻る", sep:"別ページで開く", boardT:"すべての質問", none:"まだ質問はありません。", refresh:"新しい質問は自動で表示されます。", orig:"原文",
+ kwT:"キーワード集", kwNote:"説明は下書きです。確認してください。",
+ kw:[
+  {t:"デジタル学習基盤", d:"1人1台の端末、高速ネットワーク、クラウド上の学習ツールやデータなど、学校でデジタルを使って学ぶための土台となる環境や仕組みの総称。"},
+  {t:"自由進度学習", d:"子どもが自分で学習の計画を立て、学ぶ内容・順序・ペースを選びながら進める学び方。教師は、一斉に教える役から、一人ひとりの学びを支える役へと変わります。"}
+ ],
+ foot:"資料は更新されることがあります。このページのアドレスは変わりません。"
+}};
+
+var WS = {"ja": {"h": "ワークシートの流れ(中学3年「太陽 地球 月の大きさや距離」)", "steps": [["自分のイメージを絵に描く", "自分が思っている太陽・地球・月の大きさや距離を、絵で描いてみます。"], ["大きさを58億分の1にする", "太陽・地球・月の実際の大きさ(直径)を58億分の1にして計算します。小数第2位を四捨五入して、小数第1位まで求めます。そのあと、身近なものに例えます。シートの例:太陽(直径1,400,000 km)→ 24.1 cm → バスケットボール。"], ["距離を58億分の1にする", "太陽〜地球、地球〜月の実際の距離も、同じように58億分の1にして計算し、身近なものに例えます。"], ["絵と計算結果を比べる", "1で描いたイメージ絵と、2・3の計算結果やモデルを比べて、思ったこと・感じたことを書きます。"], ["新たな疑問・問い", "考えて出てきた新しい疑問や問いを書きます。"]], "tip": "シートには単位の目安も載っています:1 km = 1000 m、1 m = 100 cm、1 cm = 10 mm。", "pdf": "ワークシート(原本・PDF)"}, "en": {"h": "Flow of the worksheet (Grade 9: Sizes and distances of the Sun, Earth and Moon)", "steps": [["Draw your own image", "Draw the sizes and distances of the Sun, Earth and Moon as you imagine them."], ["Shrink the sizes to 1/5.8 billion", "Shrink the actual size (diameter) of the Sun, Earth and Moon to 1/5.8 billion and calculate. Round to one decimal place. Then compare with something familiar. Example on the sheet: Sun (diameter 1,400,000 km) → 24.1 cm → a basketball."], ["Shrink the distances to 1/5.8 billion", "Shrink the actual distances Sun–Earth and Earth–Moon to 1/5.8 billion in the same way, and compare with something familiar."], ["Compare your drawing with the results", "Compare the image you drew in step 1 with the calculations and models from steps 2 and 3. Write what you thought and felt."], ["New questions", "Write the new questions that came up as you thought about it."]], "tip": "The sheet also prints unit hints: 1 km = 1000 m, 1 m = 100 cm, 1 cm = 10 mm.", "pdf": "Original worksheet (PDF, Japanese)"}, "bn": {"h": "ওয়ার্কশিটের ধাপ (নবম শ্রেণি: সূর্য, পৃথিবী ও চাঁদের আকার ও দূরত্ব)", "steps": [["নিজের ধারণা আঁকুন", "সূর্য, পৃথিবী ও চাঁদের আকার ও দূরত্ব আপনি যেমন কল্পনা করেন, তেমন ছবি এঁকে দেখান।"], ["আকারকে 580 কোটি ভাগের 1 ভাগে ছোট করুন", "সূর্য, পৃথিবী ও চাঁদের প্রকৃত আকার (ব্যাস) 580 কোটি ভাগের 1 ভাগে ছোট করে হিসাব করুন। দশমিকের পর দ্বিতীয় অঙ্ক রাউন্ড করে প্রথম অঙ্ক পর্যন্ত লিখুন। তারপর পরিচিত কোনো জিনিসের সঙ্গে তুলনা করুন। শিটের উদাহরণ: সূর্য (ব্যাস 1,400,000 কিমি) → 24.1 সেমি → বাস্কেটবল।"], ["দূরত্বকে 580 কোটি ভাগের 1 ভাগে ছোট করুন", "সূর্য থেকে পৃথিবী এবং পৃথিবী থেকে চাঁদের প্রকৃত দূরত্বও একইভাবে 580 কোটি ভাগের 1 ভাগে ছোট করে হিসাব করুন এবং পরিচিত জিনিসের সঙ্গে তুলনা করুন।"], ["ছবি ও হিসাবের ফল তুলনা করুন", "1 নম্বরে আঁকা ধারণার ছবির সঙ্গে 2 ও 3 নম্বরের হিসাব ও মডেল তুলনা করে যা মনে হলো, যা অনুভব করলেন, তা লিখুন।"], ["নতুন প্রশ্ন", "ভাবতে ভাবতে যে নতুন প্রশ্ন বা কৌতূহল জাগল, তা লিখুন।"]], "tip": "শিটে এককের সূত্রও দেওয়া আছে: 1 কিমি = 1000 মি, 1 মি = 100 সেমি, 1 সেমি = 10 মিমি।", "pdf": "মূল ওয়ার্কশিট (PDF, জাপানি)"}};
+var GUIDE = {"ja": {"btnOpen": "学習指導要領(抜粋)を見る", "btnClose": "学習指導要領(抜粋)を閉じる", "note": "中学校学習指導要領・同解説 理科編の該当部分の抜粋です。", "orig": "原文のドキュメントを開く", "secs": [["1. 学習指導要領 本文(第2分野 (6) 地球と宇宙)", ["ア 身近な天体とその運動に関する特徴に着目しながら、次のことを理解するとともに、それらの観察、実験などに関する技能を身に付けること。", "# (ア) 天体の動きと地球の自転・公転", "– 日周運動と自転:天体の日周運動の観察を行い、その観察記録を地球の自転と関連付けて理解すること。", "– 年周運動と公転:星座の年周運動や太陽の南中高度の変化などの観察を行い、その観察記録を地球の公転や地軸の傾きと関連付けて理解すること。", "# (イ) 太陽系と恒星", "– 太陽の様子:太陽の観察を行い、その観察記録や資料に基づいて、太陽の特徴を見いだして理解すること。", "– 惑星と恒星:観測資料などを基に、惑星と恒星などの特徴を見いだして理解するとともに、太陽系の構造について理解すること。", "– 月や金星の運動と見え方:月の観察を行い、その観察記録や資料に基づいて、月の公転と見え方を関連付けて理解すること。また、金星の観測資料などを基に、金星の公転と見え方を関連付けて理解すること。", "イ 地球と宇宙について、天体の観察、実験などを行い、その結果や資料を分析して解釈し、天体の運動と見え方についての特徴や規則性を見いだして表現すること。また、探究の過程を振り返ること。"]], ["2. 内容の取扱い(内容の (6) について)", ["「太陽の特徴」については、形、大きさ、表面の様子などを扱うこと。その際、太陽から放出された多量の光などのエネルギーによる地表への影響にも触れること。", "「惑星」については、大きさ、大気組成、表面温度、衛星の存在などを取り上げること。その際、地球には生命を支える条件が備わっていることにも触れること。「恒星」については、自ら光を放つことや太陽もその一つであることも扱うこと。その際、恒星の集団としての銀河系の存在にも触れること。「太陽系の構造」については、惑星以外の天体が存在することにも触れること。", "「月の公転と見え方」については、月の運動と満ち欠けを扱うこと。その際、日食や月食にも触れること。また、「金星の公転と見え方」については、金星の運動と満ち欠けや見かけの大きさを扱うこと。"]], ["3. 学習指導要領解説 理科編((イ) 太陽系と恒星)", ["# 太陽の様子について", "ここでは、観察記録や資料に基づいて、太陽は太陽系で最も大きいこと、自ら光を放出している天体であること、球形で自転していることを見いだして理解させることがねらいである。例えば、天体望遠鏡で太陽表面の黒点の観察を数日行い、それらの観察記録や写真、映像などの資料を基に、太陽表面の特徴を理解させる。その際、黒点の形状や動きなどの様子から、太陽は球形で自転していることを見いだして理解させることが考えられる。また、太陽から放出された多量の光や熱のエネルギーは、地球における大気の運動や生命活動に影響を与えていることにも触れる。なお、太陽の観察に当たっては、望遠鏡で直接太陽を見ることのないよう配慮する必要がある。", "# 惑星と恒星について", "ここでは、観測資料などを基に、惑星と恒星などの特徴を見いだして理解させるとともに、太陽系の構造を理解させることがねらいである。惑星の特徴については、大きさ、密度、大気組成、表面温度、衛星の存在を取り上げる。また、各惑星の特徴を理解させるためには、惑星探査機や大型望遠鏡による画像などを活用することが考えられる。惑星は大きさによって、地球を代表とするグループと木星を代表とするグループに分けられることを見いださせ、大気組成や表面温度を比較することによって地球には生命を支える条件が備わっていることにも触れる。太陽系の構造を取り上げる際に、太陽や各惑星の位置や大きさの関係をモデルとして表すことは、太陽系の構造を概観するために効果的である。さらに、太陽系には惑星以外にも、小惑星や彗星、冥王星などの天体が存在することにも触れる。恒星の特徴については、自ら光を放つこと、太陽も恒星の一つであることを理解させる。また、太陽以外の恒星を観察しそれらが点にしか見えないことや常に相互の位置関係が変わらないことから、恒星は、太陽系の天体と比べて極めて遠距離にあることに気付かせて理解させる。その際、恒星が集団をなし銀河系を構成していることにも触れる。", "# 月や金星の運動と見え方について", "ここでは、月が約1ヶ月周期で満ち欠けし、同じ時刻に見える位置が毎日移り変わっていくことを、月が地球の周りを公転していることと関連付けて理解させるとともに、金星の観測資料などから、金星の見かけの形と大きさの変化を、金星が地球の内側の軌道を公転していることと関連付けて理解させることがねらいである。月の運動と見え方については、例えば、日没直後の月の位置と形を継続的に観察し、その観察記録や写真、映像などの資料を基に、月の見え方の特徴を見いださせ、それを太陽と月の位置関係や月の運動と関連付けて考察し理解させる。また、日食や月食が月の公転運動と関わって起こる現象であることにも触れる。金星の運動と見え方については、観測資料を基に金星の見かけの形と大きさが変化することを見いださせる。その上で、例えば、地球から見える金星の形がどのように変化するかという課題を解決するため、太陽と金星の位置関係に着目してモデル実験の計画を立てて調べさせる。その後、課題に対して実験方法や考察が妥当であるか探究の過程を振り返らせることが考えられる。その際、観察者の視点(位置)を移動させ、太陽、金星、地球を俯瞰するような視点と、地球からの視点とで考えさせることが大切である。"]], ["4. 指導・見学のポイント(太陽・月・地球の「距離と大きさ」)", ["– モデル化の活用:太陽や各惑星の位置や大きさの関係をモデルとして縮尺表現することは、生徒が広大な太陽系の全体像と各天体のサイズ差・距離感を直感的に把握するために効果的とされています。", "– 視点の移動(空間的見方・考え方):「地球からの視点」と「太陽・地球・月等を俯瞰(外側から観察)する視点」を相互に行き来させることが求められています。", "– 実感を伴う比較:惑星の大きさや密度、大気組成の比較を通じて、「地球には生命を支える独自の条件が備わっている」ことを実感させることが意図されています。"]]]}, "en": {"btnOpen": "Show the curriculum guideline (extract)", "btnClose": "Hide the curriculum guideline (extract)", "note": "Extract of the relevant parts of the Japanese Course of Study for lower secondary schools and its commentary (Science). The English is an unofficial translation; please check it.", "orig": "Open the original document (Japanese)", "secs": [["1. Course of Study (text): Science Field 2, (6) Earth and Space", ["A. While focusing on the features of familiar celestial bodies and their motion, students understand the following and acquire skills for observation and experiments related to them.", "# (a) Motion of celestial bodies, and Earth's rotation and revolution", "– Daily motion and rotation: Observe the daily motion of celestial bodies and understand the records in relation to Earth's rotation.", "– Annual motion and revolution: Observe the annual motion of constellations and changes in the Sun's culmination altitude, and understand the records in relation to Earth's revolution and the tilt of its axis.", "# (b) The solar system and stars", "– The Sun: Observe the Sun and, based on the records and materials, find and understand its features.", "– Planets and stars: Based on observational data, find and understand the features of planets, stars and so on, and understand the structure of the solar system.", "– Motion and appearance of the Moon and Venus: Observe the Moon and, based on the records and materials, understand its revolution in relation to how it looks. Also, based on observational data of Venus, understand its revolution in relation to how it looks.", "B. Through observation and experiments on Earth and space, analyse and interpret the results and materials, find and express the features and regularities in the motion and appearance of celestial bodies, and reflect on the process of inquiry."]], ["2. Handling of the content (on (6))", ["On the \"features of the Sun\": deal with its shape, size and surface. Also mention the effects on the Earth's surface of the large amount of energy, such as light, released by the Sun.", "On \"planets\": take up size, atmospheric composition, surface temperature and the existence of satellites. Also mention that Earth has the conditions that support life. On \"stars\": deal with the fact that they emit light themselves and that the Sun is one of them. Also mention the Milky Way Galaxy as a group of stars. On the \"structure of the solar system\": also mention that bodies other than planets exist.", "On the \"revolution and appearance of the Moon\": deal with the Moon's motion and phases. Also mention solar and lunar eclipses. On the \"revolution and appearance of Venus\": deal with its motion, phases and apparent size."]], ["3. Commentary (Science): (b) The solar system and stars", ["# The Sun", "The aim is to have students find and understand, from observation records and materials, that the Sun is the largest body in the solar system, emits light itself, is spherical and rotates. For example, students observe sunspots on the Sun's surface with a telescope over several days and, from the records, photos and video, understand the features of the Sun's surface. From the shape and movement of the sunspots, they find that the Sun is spherical and rotating. Teachers also mention that the large amount of light and heat energy released by the Sun affects atmospheric motion and living things on Earth. When observing the Sun, take care that no one looks directly at it through a telescope.", "# Planets and stars", "The aim is to have students find and understand the features of planets and stars from observational data, and understand the structure of the solar system. For planets, take up size, density, atmospheric composition, surface temperature and satellites. Images from space probes and large telescopes can be used. Students find that planets divide by size into an Earth-type group and a Jupiter-type group, and by comparing atmosphere and surface temperature, teachers also mention that Earth has the conditions that support life. When dealing with the structure of the solar system, representing the positions and sizes of the Sun and planets as a model is effective for getting an overview. Teachers also mention that asteroids, comets, Pluto and other bodies exist besides planets. For stars, students understand that they emit light themselves and that the Sun is one of them. By observing stars other than the Sun, they notice that stars look like points and that their positions relative to one another never change, which shows that stars are extremely far away compared with bodies in the solar system. Teachers also mention that stars form groups that make up the Milky Way Galaxy.", "# Motion and appearance of the Moon and Venus", "The aim is to have students understand that the Moon waxes and wanes in a cycle of about one month and that its position at the same time shifts each day, in relation to its revolution around Earth; and, from observational data of Venus, understand the changes in its apparent shape and size in relation to its orbit inside Earth's orbit. For the Moon, for example, students observe its position and shape just after sunset over time and, from the records, photos and video, find features of how it looks, then consider them in relation to the positions of the Sun and Moon and the Moon's motion. Teachers also mention that solar and lunar eclipses occur with the Moon's revolution. For Venus, students find from data that its apparent shape and size change. Then, to solve the problem of how Venus's shape seen from Earth changes, they plan a model experiment focusing on the positional relationship of the Sun and Venus. Afterward they reflect on whether the experimental method and consideration were appropriate. It is important to have them think both from a bird's-eye view of the Sun, Venus and Earth and from Earth's viewpoint, by moving the observer's viewpoint (position)."]], ["4. Points for teaching and observation (size and distance of the Sun, Moon and Earth)", ["– Use of modelling: Representing the positions and sizes of the Sun and planets as a scale model is considered effective for students to intuitively grasp the whole of the vast solar system and the differences in size and distance between the bodies.", "– Shifting viewpoint (spatial way of seeing and thinking): Students are asked to move back and forth between \"the view from Earth\" and \"a bird's-eye view of the Sun, Earth, Moon and so on from outside\".", "– Comparison that brings real feeling: By comparing the size, density and atmospheric composition of planets, students are meant to realise that \"Earth has unique conditions that support life\"."]]]}, "bn": {"btnOpen": "পাঠ্যক্রম নির্দেশিকা (অংশ) দেখুন", "btnClose": "পাঠ্যক্রম নির্দেশিকা (অংশ) বন্ধ করুন", "note": "জাপানের নিম্ন মাধ্যমিক বিদ্যালয়ের পাঠ্যক্রম নির্দেশিকা ও তার ব্যাখ্যা (বিজ্ঞান খণ্ড)-এর প্রাসঙ্গিক অংশের সারাংশ। বাংলা অনুবাদটি অনানুষ্ঠানিক; দয়া করে যাচাই করুন।", "orig": "মূল নথি খুলুন (জাপানি)", "secs": [["1. পাঠ্যক্রম নির্দেশিকা (মূল পাঠ): দ্বিতীয় ক্ষেত্র (6) পৃথিবী ও মহাকাশ", ["ক. পরিচিত মহাকাশীয় বস্তু ও তাদের গতির বৈশিষ্ট্যের দিকে নজর দিয়ে নিচের বিষয়গুলো বোঝা এবং সেগুলোর পর্যবেক্ষণ ও পরীক্ষা-নিরীক্ষার দক্ষতা অর্জন করা।", "# (অ) মহাকাশীয় বস্তুর গতি এবং পৃথিবীর আবর্তন ও পরিক্রমণ", "– দৈনিক গতি ও আবর্তন: মহাকাশীয় বস্তুর দৈনিক গতি পর্যবেক্ষণ করে সেই পর্যবেক্ষণ-তথ্যকে পৃথিবীর আবর্তনের সঙ্গে যুক্ত করে বোঝা।", "– বার্ষিক গতি ও পরিক্রমণ: তারামণ্ডলের বার্ষিক গতি এবং মধ্যাকাশে সূর্যের উচ্চতার পরিবর্তন পর্যবেক্ষণ করে সেই তথ্যকে পৃথিবীর পরিক্রমণ ও অক্ষের হেলানোর সঙ্গে যুক্ত করে বোঝা।", "# (আ) সৌরজগৎ ও নক্ষত্র", "– সূর্যের অবস্থা: সূর্য পর্যবেক্ষণ করে সেই তথ্য ও উপকরণের ভিত্তিতে সূর্যের বৈশিষ্ট্য খুঁজে বের করে বোঝা।", "– গ্রহ ও নক্ষত্র: পর্যবেক্ষণ-তথ্যের ভিত্তিতে গ্রহ ও নক্ষত্র প্রভৃতির বৈশিষ্ট্য খুঁজে বের করে বোঝা এবং সৌরজগতের কাঠামো বোঝা।", "– চাঁদ ও শুক্র গ্রহের গতি ও দৃশ্যরূপ: চাঁদ পর্যবেক্ষণ করে সেই তথ্য ও উপকরণের ভিত্তিতে চাঁদের পরিক্রমণকে তার দৃশ্যরূপের সঙ্গে যুক্ত করে বোঝা। একইভাবে শুক্র গ্রহের পর্যবেক্ষণ-তথ্যের ভিত্তিতে তার পরিক্রমণকে দৃশ্যরূপের সঙ্গে যুক্ত করে বোঝা।", "খ. পৃথিবী ও মহাকাশ বিষয়ে মহাকাশীয় বস্তুর পর্যবেক্ষণ ও পরীক্ষা-নিরীক্ষা করে ফলাফল ও তথ্য বিশ্লেষণ ও ব্যাখ্যা করা; মহাকাশীয় বস্তুর গতি ও দৃশ্যরূপের বৈশিষ্ট্য ও নিয়ম খুঁজে বের করে প্রকাশ করা; এবং অনুসন্ধানের প্রক্রিয়া নিয়ে ভেবে দেখা।"]], ["2. বিষয়বস্তুর ব্যবহার-নির্দেশ ((6) সম্পর্কে)", ["‘সূর্যের বৈশিষ্ট্য’: আকৃতি, আকার ও পৃষ্ঠের অবস্থা নিয়ে আলোচনা করা। সে সময় সূর্য থেকে নির্গত প্রচুর আলো প্রভৃতি শক্তির কারণে ভূপৃষ্ঠে যে প্রভাব পড়ে, তাও উল্লেখ করা।", "‘গ্রহ’: আকার, বায়ুমণ্ডলের গঠন, পৃষ্ঠের তাপমাত্রা ও উপগ্রহের উপস্থিতি তুলে ধরা। সে সময় পৃথিবীতে প্রাণ ধারণের উপযোগী পরিস্থিতি রয়েছে, তাও উল্লেখ করা। ‘নক্ষত্র’: নক্ষত্র নিজে আলো দেয় এবং সূর্যও তাদের একটি—এটি আলোচনা করা; সে সময় নক্ষত্রের সমষ্টি হিসেবে ছায়াপথের অস্তিত্বও উল্লেখ করা। ‘সৌরজগতের কাঠামো’: গ্রহ ছাড়াও অন্য মহাকাশীয় বস্তু আছে, তাও উল্লেখ করা।", "‘চাঁদের পরিক্রমণ ও দৃশ্যরূপ’: চাঁদের গতি ও কলার হ্রাসবৃদ্ধি আলোচনা করা; সে সময় সূর্যগ্রহণ ও চন্দ্রগ্রহণও উল্লেখ করা। ‘শুক্র গ্রহের পরিক্রমণ ও দৃশ্যরূপ’: শুক্রের গতি, কলার হ্রাসবৃদ্ধি ও আপাত আকার আলোচনা করা।"]], ["3. ব্যাখ্যা (বিজ্ঞান খণ্ড): (আ) সৌরজগৎ ও নক্ষত্র", ["# সূর্যের অবস্থা", "উদ্দেশ্য হলো পর্যবেক্ষণ-তথ্য ও উপকরণের ভিত্তিতে শিক্ষার্থীরা খুঁজে বের করে বুঝবে যে সূর্য সৌরজগতের সবচেয়ে বড় বস্তু, নিজে আলো বিকিরণ করে, গোলাকার এবং নিজ অক্ষে ঘোরে। যেমন: কয়েকদিন ধরে দূরবিন দিয়ে সূর্যের পৃষ্ঠের কালো দাগ (সানস্পট) পর্যবেক্ষণ করে, সেই তথ্য, ছবি ও ভিডিও থেকে সূর্যপৃষ্ঠের বৈশিষ্ট্য বোঝানো। দাগের আকৃতি ও গতি দেখে সূর্য যে গোলাকার ও ঘূর্ণায়মান, তা খুঁজে নেওয়া যায়। এছাড়া সূর্য থেকে নির্গত প্রচুর আলো ও তাপশক্তি পৃথিবীর বায়ুমণ্ডলের গতি ও প্রাণের কার্যকলাপে প্রভাব ফেলে, তাও উল্লেখ করা হয়। সূর্য পর্যবেক্ষণের সময় দূরবিন দিয়ে সরাসরি সূর্যের দিকে না তাকানোর বিষয়ে সতর্ক থাকতে হবে।", "# গ্রহ ও নক্ষত্র", "উদ্দেশ্য হলো পর্যবেক্ষণ-তথ্যের ভিত্তিতে গ্রহ ও নক্ষত্র প্রভৃতির বৈশিষ্ট্য খুঁজে বের করে বোঝানো এবং সৌরজগতের কাঠামো বোঝানো। গ্রহের বৈশিষ্ট্য হিসেবে আকার, ঘনত্ব, বায়ুমণ্ডলের গঠন, পৃষ্ঠের তাপমাত্রা ও উপগ্রহের উপস্থিতি তুলে ধরা হয়। মহাকাশ অভিযানের যান ও বড় দূরবিনের ছবিও কাজে লাগানো যায়। শিক্ষার্থীরা খুঁজে পাবে যে আকার অনুযায়ী গ্রহগুলো পৃথিবীর মতো গ্রুপ এবং বৃহস্পতির মতো গ্রুপে ভাগ হয়; বায়ুমণ্ডলের গঠন ও পৃষ্ঠের তাপমাত্রা তুলনা করে পৃথিবীতে যে প্রাণ ধারণের উপযোগী পরিস্থিতি আছে, তাও উল্লেখ করা হয়। সৌরজগতের কাঠামো আলোচনায় সূর্য ও গ্রহগুলোর অবস্থান ও আকারের সম্পর্ক মডেলে দেখানো সামগ্রিক রূপ বোঝার জন্য কার্যকর। এছাড়া গ্রহ ছাড়াও গ্রহাণু, ধূমকেতু, প্লুটো প্রভৃতি বস্তু সৌরজগতে আছে, তাও উল্লেখ করা হয়। নক্ষত্রের বৈশিষ্ট্য হিসেবে বোঝানো হয় যে তারা নিজে আলো দেয় এবং সূর্যও একটি নক্ষত্র। সূর্য ছাড়া অন্য নক্ষত্র পর্যবেক্ষণ করে শিক্ষার্থীরা লক্ষ করে যে সেগুলো বিন্দুর মতো দেখায় এবং একে অপরের সাপেক্ষে অবস্থান কখনো বদলায় না; এ থেকে বোঝা যায় নক্ষত্রগুলো সৌরজগতের বস্তুর তুলনায় অত্যন্ত দূরে। সে সময় নক্ষত্ররা দল বেঁধে ছায়াপথ গঠন করে, তাও উল্লেখ করা হয়।", "# চাঁদ ও শুক্র গ্রহের গতি ও দৃশ্যরূপ", "উদ্দেশ্য হলো শিক্ষার্থীরা বুঝবে যে চাঁদ প্রায় এক মাসের চক্রে কলা বদলায় এবং একই সময়ে চাঁদ যেখানে দেখা যায় সেই অবস্থান প্রতিদিন সরে যায়—এটি চাঁদের পৃথিবীকে পরিক্রমণের সঙ্গে যুক্ত; এবং শুক্র গ্রহের পর্যবেক্ষণ-তথ্য থেকে শুক্রের আপাত আকৃতি ও আকারের পরিবর্তনকে পৃথিবীর ভেতরের কক্ষপথে তার পরিক্রমণের সঙ্গে যুক্ত করে বোঝা। চাঁদের ক্ষেত্রে যেমন: সূর্যাস্তের ঠিক পরে চাঁদের অবস্থান ও আকৃতি ধারাবাহিকভাবে পর্যবেক্ষণ করে, সেই তথ্য, ছবি ও ভিডিও থেকে চাঁদের দৃশ্যরূপের বৈশিষ্ট্য খুঁজে বের করা এবং তা সূর্য-চাঁদের অবস্থান-সম্পর্ক ও চাঁদের গতির সঙ্গে যুক্ত করে ভেবে বোঝা। সূর্যগ্রহণ ও চন্দ্রগ্রহণ যে চাঁদের পরিক্রমণের সঙ্গে সম্পর্কিত ঘটনা, তাও উল্লেখ করা হয়। শুক্রের ক্ষেত্রে পর্যবেক্ষণ-তথ্য থেকে তার আপাত আকৃতি ও আকার বদলায়, তা খুঁজে নেওয়া হয়। এরপর যেমন: পৃথিবী থেকে দেখা শুক্রের আকৃতি কীভাবে বদলায়—এই সমস্যার সমাধানে সূর্য ও শুক্রের অবস্থান-সম্পর্কের দিকে নজর দিয়ে মডেল পরীক্ষার পরিকল্পনা করে অনুসন্ধান করা হয়। তারপর পরীক্ষার পদ্ধতি ও বিবেচনা যথার্থ ছিল কি না, অনুসন্ধানের সেই প্রক্রিয়া নিয়ে ভেবে দেখা যায়। এ সময় পর্যবেক্ষকের দৃষ্টিকোণ (অবস্থান) সরিয়ে, সূর্য, শুক্র ও পৃথিবীকে ওপর থেকে দেখার দৃষ্টিকোণ এবং পৃথিবী থেকে দেখার দৃষ্টিকোণ—দুটি থেকেই ভাবানো গুরুত্বপূর্ণ।"]], ["4. পাঠদান ও পর্যবেক্ষণের মূল বিষয় (সূর্য, চাঁদ ও পৃথিবীর আকার ও দূরত্ব)", ["– মডেল ব্যবহার: সূর্য ও গ্রহগুলোর অবস্থান ও আকারের সম্পর্ককে ছোট মাপের (স্কেল) মডেলে দেখানো শিক্ষার্থীদের বিশাল সৌরজগতের সামগ্রিক রূপ এবং বস্তুগুলোর আকার ও দূরত্বের পার্থক্য সহজে অনুভব করতে সাহায্য করে বলে মনে করা হয়।", "– দৃষ্টিকোণ বদল (স্থানিক দৃষ্টিভঙ্গি): ‘পৃথিবী থেকে দেখা’ এবং ‘বাইরে থেকে সূর্য, পৃথিবী, চাঁদ ইত্যাদিকে একসঙ্গে দেখা’—এই দুই দৃষ্টিকোণের মধ্যে বারবার যাওয়া-আসা করা প্রত্যাশিত।", "– অনুভবসহ তুলনা: গ্রহের আকার, ঘনত্ব ও বায়ুমণ্ডলের গঠন তুলনা করে ‘পৃথিবীতে প্রাণ ধারণের বিশেষ পরিস্থিতি আছে’ তা অনুভব করানোই উদ্দেশ্য।"]]]}};
+var guideOpen = false;
+
+/* 質問の相手(カテゴリー) */
+var TARGETS = [
+  {id:"d24",  c:"--c1", bn:"24 নভেম্বর (কিন)", en:"24 Nov (Kin)", ja:"24日(Kin)"},
+  {id:"sci",  c:"--c2", bn:"25 নভেম্বর · নিম্ন মাধ্যমিক (বিজ্ঞান)", en:"25 Nov · Lower secondary (Science)", ja:"25日 中学校 理科"},
+  {id:"math", c:"--c3", bn:"25 নভেম্বর · প্রাথমিক (গণিত)", en:"25 Nov · Primary (Math)", ja:"25日 小学校 算数"},
+  {id:"ict",  c:"--c4", bn:"শিক্ষা ও আইসিটি", en:"Education & ICT", ja:"教育とICT"},
+  {id:"other",c:"--c5", bn:"অন্যান্য", en:"Other", ja:"その他"}
+];
+
+/* ═══════════════════ 状態 ═══════════════════ */
+var lang = (function(){ try{ return localStorage.getItem("jp.lang") || "bn"; }catch(e){ return "bn"; } })();
+var STANDALONE = !!window.STANDALONE;
+var tab = STANDALONE ? "q" : ((location.hash||"").replace("#","") || "home");
+var notes = [];
+var filter = "";
+var replies = [];
+var reacts = {};      /* {質問id:{絵文字:[client,...]}} */
+var openThread = {};  /* 開いている返信欄 */
+var drafts = {};      /* 書きかけの返信 */
+var lastAct = 0;      /* 自分が最後に押した時刻(直後の古いデータで上書きしない) */
+var EMOJI = ["👍"];
+var myName = (function(){ try{ return localStorage.getItem("jp.name")||""; }catch(e){ return ""; } })();
+var pollT = null;
+var DEMO = [
+  {id:"d1", ts:Date.now()-60000, name:"(sample)", target:"math", text:"শিক্ষার্থীরা কীভাবে আগের আকারে রূপান্তর করার ধারণা বোঝে?", text_en:"How do students understand the idea of transforming into the earlier shape?", text_ja:"児童は、既習の形に変形するという考え方をどのように理解しますか?"},
+  {id:"d2", ts:Date.now()-30000, name:"(sample)", target:"ict",  text:"ইন্টারনেট না থাকলে ক্লাস কীভাবে চলে?", text_en:"How does the class run when there is no internet?", text_ja:"インターネットがないとき、授業はどのように進めますか?"}
+];
+
+function T(){ return L[lang]; }
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+function tgt(id){ for(var i=0;i<TARGETS.length;i++) if(TARGETS[i].id===id) return TARGETS[i]; return TARGETS[4]; }
+function btn(url,label,solid){
+  if(!url) return '<span class="btn off">'+esc(label)+' · '+esc(T().soon)+'</span>';
+  return '<a class="btn'+(solid?' solid':'')+'" href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(label)+' ↗</a>';
+}
+
+/* ═══════════════════ 通信(カンボジア版と同じ作り) ═══════════════════ */
+function gasPost(obj, cb){
+  fetch(CFG.gas,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(obj)})
+    .then(function(r){return r.json();}).then(function(j){cb(j);})
+    .catch(function(){
+      fetch(CFG.gas,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(obj)})
+        .then(function(){cb({ok:true,unconfirmed:true});}).catch(function(){cb({ok:false});});
+    });
+}
+function pull(){
+  if(!CFG.gas){ if(!notes.length) { notes=DEMO.slice(); reacts={d1:{"👍":["x","y","z"],"💡":["x"]},d2:{"🤔":["y"]}}; replies=[{id:"r1",qid:"d1",name:"(sample)",text:"আমারও একই প্রশ্ন ছিল।",text_en:"I had the same question.",text_ja:"私も同じ疑問を持っていました。"}]; render(); } return; }
+  fetch(CFG.gas+(CFG.gas.indexOf("?")<0?"?":"&")+"action=list&_="+Date.now())
+    .then(function(r){return r.json();})
+    .then(function(j){
+      if(j && j.ok){
+        if(Date.now()-lastAct<4000) return;   /* 自分が押した直後は、古いデータで上書きしない */
+        var s=JSON.stringify([j.notes,j.replies||[],j.reacts||{}]);
+        if(s!==pull.last){ pull.last=s; notes=j.notes; replies=j.replies||[]; reacts=j.reacts||{}; if(tab==="q" && !typing()) renderBoardOnly(); }
+      }
+    }).catch(function(){});
+}
+function typing(){ var a=document.activeElement; return !!a && (a.tagName==="TEXTAREA"||a.tagName==="INPUT"||a.tagName==="SELECT"); }
+
+/* ═══════════════════ 画面 ═══════════════════ */
+function setLang(l){ lang=l; try{localStorage.setItem("jp.lang",l);}catch(e){} document.documentElement.lang=l; document.body.setAttribute("data-lang",l); render(); }
+function go(t){ if(STANDALONE) return; tab=t; try{ history.replaceState(null,"","#"+t); }catch(e){ location.hash=t; } render(); window.scrollTo(0,0); }
+
+function renderSide(){
+  var t=T();
+  document.getElementById("brandSub").textContent=t.brandSub;
+  document.getElementById("brandTitle").textContent=t.brandTitle;
+  document.getElementById("langBox").innerHTML=["bn","en","ja"].map(function(l){
+    return '<button data-l="'+l+'" class="'+(lang===l?"on":"")+'">'+esc(L[l].name)+'</button>'; }).join("");
+  var keys=["home","ob","d24","am","pm","eve","q","kw"];
+  if(STANDALONE){ document.getElementById("nav").innerHTML='<a class="btn" style="margin:4px 6px" href="'+esc(CFG.portalPage||"index.html")+'">← '+esc(t.back)+'</a>'; return; }
+  document.getElementById("nav").innerHTML=keys.map(function(k,i){
+    return (k==="q"?'<div class="sep"></div>':'')+'<button data-t="'+k+'" class="'+(tab===k?"on":"")+'">'+esc(t.nav[k])+'</button>'; }).join("");
+}
+
+function vHome(){
+  var t=T();
+  var cards=[["ob",t.nav.ob,OB[lang].lead],["d24",t.nav.d24,t.d24Sub],["am",t.nav.am,t.amSub],["pm",t.nav.pm,t.pmSub],["eve",t.nav.eve,t.eveSub],["q",t.nav.q,t.qLead],["kw",t.nav.kw,t.kwNote]];
+  return '<h1>'+esc(t.homeT)+'</h1><p class="lead">'+esc(t.homeLead)+'</p><div class="grid">'+
+    cards.map(function(c){ return '<div class="card link" data-go="'+c[0]+'"><div class="time">'+esc(c[1])+'</div><h3>'+esc(c[2])+'</h3></div>'; }).join("")+'</div>';
+}
+
+var OB = {
+ja:{ t:"小布施町とは", lead:"「栗と北斎と花のまち」として知られる、長野県北部の小さな町",
+ stats:[["10,660","人口(2020年国勢調査)"],["19.12 km²","面積(県内最小の町)"]],
+ motto:"「栗と北斎と花のまち」", mottoSub:"Town of Chestnuts, Hokusai and Flowers",
+ loc:"位置:長野県北部、千曲川沿いの平野に位置する",
+ three:[["栗","栗菓子と、りんご・ぶどうなどの果樹栽培が特産"],["北斎","江戸後期に豪商らが北斎を招いた。1976年に北斎館が開館"],["花","オープンガーデン:住民が自宅の庭を公開し、訪れる人を迎える"]],
+ sum:"住民主体のまちづくりで、年間約120万人が訪れる",
+ src:"出典:令和2年国勢調査(総務省)、国土交通省「小布施のまちづくり」資料ほか。観光客数は概数。",
+ eduT:"小布施町の教育", eduLead:"町内1小学校と1中学校での授業観察を予定",
+ ov:["長野県教育委員会「TOCO-TON(トコトン)」指定地域","町内唯一の公立小学校・中学校が共同で取り組む探究型学習。9年間一貫のモデルとして、地域と連携し自立的な学びを育む"],
+ boe:["小布施町教育委員会","島田指導主事(予定)","内容:小布施町の教育について","元校長として、管理職の立場から見た校内でのICT教育の推進(調整中)"],
+ schools:[["栗ガ丘小学校",["授業者:小林教諭(小学6年・算数)","ポイント:小学校算数における生成AIやICTを活用した自由進度学習","授業内容:後日共有(TBD)","授業後に小林教諭との懇談あり"]],["小布施中学校",["授業者:市川教諭(中学3年・理科)","ポイント:中学校理科におけるICTを活用した授業","授業内容:後日共有(TBD)"]]],
+ goal:"日本のICT・AI活用の方向性を、地方公立学校現場の授業や対話を通して確認する",
+ slides:"元のスライドを開く" },
+en:{ t:"About Obuse Town", lead:"A small town known as the “Town of Chestnuts, Hokusai and Flowers”, in northern Nagano",
+ stats:[["10,660","Population (2020 Census)"],["19.12 km²","Area (smallest town in Nagano)"]],
+ motto:"Town of Chestnuts, Hokusai and Flowers", mottoSub:"「栗と北斎と花のまち」",
+ loc:"Location: Northern Nagano, on the Chikuma River plain",
+ three:[["Chestnuts","Chestnut sweets and orchards (apples, grapes) are local specialties"],["Hokusai","Edo-era merchants hosted Katsushika Hokusai; Hokusai-kan museum opened in 1976"],["Flowers","Open gardens: residents share their private gardens with visitors"]],
+ sum:"Resident-led town building draws about 1.2 million visitors a year",
+ src:"Sources: 2020 National Census (MIC); MLIT materials on Obuse town development; visitor count is approximate.",
+ eduT:"Education in Obuse", eduLead:"One town, two public schools: classroom observation and discussion",
+ ov:["Obuse Town is an education area designated by Nagano Prefectural Board of Education (“TOCO-TON”)","The town’s sole public primary and lower secondary schools jointly run inquiry-based learning as a nine-year model with the community"],
+ boe:["Obuse Board of Education","Mr. Shimada, Education Supervisor (planned)","Topic: Education in Obuse","Also requested: a school leader’s view on promoting ICT in schools (as a former principal) [TBC]"],
+ schools:[["Kurigaoka Primary School",["Teacher: Mr. Kobayashi (Grade 6, Mathematics)","Focus: Self-paced learning using generative AI and ICT in primary mathematics","Lesson details: TBD","After the lesson: talk with Mr. Kobayashi"]],["Obuse Lower Secondary School",["Teacher: Mr. Ichikawa (Grade 9, Science)","Focus: ICT-supported science lessons","Lesson details: TBD"]]],
+ goal:"Examining the direction of ICT and AI adoption in Japan through classroom observations and dialogue in local public schools",
+ slides:"Open the original slides" },
+bn:{ t:"ওবুসে শহর পরিচিতি", lead:"নাগানো প্রদেশের উত্তরে একটি ছোট শহর, যা “চেস্টনাট, হোকুসাই ও ফুলের শহর” নামে পরিচিত",
+ stats:[["10,660","জনসংখ্যা (২০২০ সালের আদমশুমারি)"],["19.12 কিমি²","আয়তন (নাগানো প্রদেশের সবচেয়ে ছোট শহর)"]],
+ motto:"চেস্টনাট, হোকুসাই ও ফুলের শহর", mottoSub:"「栗と北斎と花のまち」 · Town of Chestnuts, Hokusai and Flowers",
+ loc:"অবস্থান: নাগানো প্রদেশের উত্তরে, চিকুমা নদীর পাশের সমতলে",
+ three:[["চেস্টনাট","চেস্টনাটের মিষ্টি এবং আপেল ও আঙুরের মতো ফলের বাগান এখানকার বিশেষত্ব"],["হোকুসাই","এডো যুগের শেষ দিকে ধনী বণিকেরা শিল্পী হোকুসাইকে আমন্ত্রণ জানান। ১৯৭৬ সালে হোকুসাই জাদুঘর খোলে"],["ফুল","ওপেন গার্ডেন: বাসিন্দারা নিজেদের বাগান দর্শনার্থীদের জন্য খুলে দেন"]],
+ sum:"বাসিন্দাদের নেতৃত্বে গড়ে ওঠা এই শহরে প্রতি বছর প্রায় ১২ লক্ষ মানুষ আসেন",
+ src:"সূত্র: ২০২০ সালের জাতীয় আদমশুমারি (জাপানের স্বরাষ্ট্র মন্ত্রণালয়); জাপানের ভূমি, অবকাঠামো ও পরিবহন মন্ত্রণালয়ের ওবুসের নগর উন্নয়ন সংক্রান্ত উপকরণ ইত্যাদি। দর্শনার্থীর সংখ্যা আনুমানিক।",
+ eduT:"ওবুসের শিক্ষা", eduLead:"একটি শহর, দুটি সরকারি বিদ্যালয়: শ্রেণিকক্ষ পর্যবেক্ষণ ও আলোচনা",
+ ov:["ওবুসে নাগানো প্রদেশের শিক্ষা বোর্ড নির্ধারিত “TOCO-TON” এলাকা","শহরের একমাত্র সরকারি প্রাথমিক ও নিম্ন মাধ্যমিক বিদ্যালয় যৌথভাবে স্থানীয় সম্প্রদায়ের সঙ্গে নয় বছরের একটানা মডেল হিসেবে অনুসন্ধানভিত্তিক শিক্ষা পরিচালনা করে"],
+ boe:["ওবুসে শহর শিক্ষা বোর্ড","শিমাদা সাহেব, শিক্ষা তত্ত্বাবধায়ক (প্রস্তাবিত)","বিষয়: ওবুসের শিক্ষা","এছাড়া অনুরোধ: সাবেক প্রধান শিক্ষক হিসেবে বিদ্যালয়ে আইসিটি প্রসারে নেতৃত্বের দৃষ্টিভঙ্গি [নিশ্চিত নয়]"],
+ schools:[["কুরিগাওকা প্রাথমিক বিদ্যালয়",["শিক্ষক: কোবায়াশি সাহেব (ষষ্ঠ শ্রেণি, গণিত)","মূল বিষয়: প্রাথমিক গণিতে জেনারেটিভ এআই ও আইসিটি ব্যবহার করে নিজের গতিতে শেখা","পাঠের বিবরণ: পরে জানানো হবে","পাঠের পর কোবায়াশি সাহেবের সঙ্গে আলাপ"]],["ওবুসে নিম্ন মাধ্যমিক বিদ্যালয়",["শিক্ষক: ইচিকাওয়া সাহেব (নবম শ্রেণি, বিজ্ঞান)","মূল বিষয়: আইসিটি-সহায়ক বিজ্ঞান পাঠ","পাঠের বিবরণ: পরে জানানো হবে"]]],
+ goal:"স্থানীয় সরকারি বিদ্যালয়ের পাঠ পর্যবেক্ষণ ও আলাপের মাধ্যমে জাপানে আইসিটি ও এআই ব্যবহারের দিকনির্দেশ দেখা",
+ slides:"মূল স্লাইড খুলুন (ইংরেজি/জাপানি)",
+ note:"বাংলা অংশটি অনানুষ্ঠানিক অনুবাদ; দয়া করে যাচাই করুন।" }
+};
+function vOB(){
+  var o=OB[lang], h='<h1>'+esc(o.t)+'</h1><p class="lead">'+esc(o.lead)+'</p>';
+  h+='<div class="grid">'+o.stats.map(function(x){ return '<div class="card"><div class="time" style="font-size:30px;letter-spacing:0">'+esc(x[0])+'</div><p style="margin:2px 0 0">'+esc(x[1])+'</p></div>'; }).join("")+
+     '<div class="card"><h3>'+esc(o.motto)+'</h3><p style="margin:0">'+esc(o.mottoSub)+'</p></div></div>';
+  h+='<p class="note">'+esc(o.loc)+'</p><div class="grid">'+o.three.map(function(x){ return '<div class="card"><h3>'+esc(x[0])+'</h3><p style="margin:0">'+esc(x[1])+'</p></div>'; }).join("")+'</div>';
+  h+='<p class="big"><b>▶ '+esc(o.sum)+'</b></p><p class="hint">'+esc(o.src)+'</p>';
+  h+='<h2>'+esc(o.eduT)+'</h2><p class="lead">'+esc(o.eduLead)+'</p><div class="card"><ul class="pts">'+o.ov.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul></div>';
+  h+='<div class="grid"><div class="card"><h3>'+esc(o.boe[0])+'</h3><ul class="pts">'+o.boe.slice(1).map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul></div>'+
+     o.schools.map(function(sc){ return '<div class="card"><h3>'+esc(sc[0])+'</h3><ul class="pts">'+sc[1].map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul></div>'; }).join("")+'</div>';
+  h+='<p class="big"><b>▶ '+esc(o.goal)+'</b></p>';
+  var bs=CFG.obuseSlides||{};
+  h+='<div class="btns">'+(bs.en?'<a class="btn" href="'+esc(bs.en)+'" target="_blank" rel="noopener">'+esc(o.slides)+' · EN ↗</a>':'')+(bs.ja?'<a class="btn" href="'+esc(bs.ja)+'" target="_blank" rel="noopener">'+esc(o.slides)+' · 日本語 ↗</a>':'')+'</div>';
+  if(o.note) h+='<p class="hint">'+esc(o.note)+'</p>';
+  return h;
+}
+function vD24(){ var t=T();
+  return '<h1>'+esc(t.d24T)+'</h1><p class="lead">'+esc(t.d24Sub)+'</p><p class="big">'+esc(t.d24Body)+'</p><div class="btns">'+btn(CFG.day24,t.d24Btn,true)+'</div>';
+}
+function guideHtml(){
+  var g=GUIDE[lang], h='';
+  g.secs.forEach(function(sec,k){
+    h+='<details'+(k===0?' open':'')+'><summary>'+esc(sec[0])+'</summary><div class="gb">'+sec[1].map(function(x){
+      if(x.indexOf("# ")===0) return '<p class="hd">'+esc(x.slice(2))+'</p>';
+      if(x.indexOf("– ")===0) return '<p class="sub">'+esc(x)+'</p>';
+      return '<p>'+esc(x)+'</p>'; }).join("")+'</div></details>';
+  });
+  return '<div class="gpanel"><p class="note">'+esc(g.note)+'</p>'+h+(CFG.sciGuideline?'<div class="btns">'+btn(CFG.sciGuideline,g.orig,false)+'</div>':'')+'</div>';
+}
+function vAM(){ var t=T(), w=WS[lang], g=GUIDE[lang];
+  return '<h1>'+esc(t.amT)+'</h1><p class="lead">'+esc(t.amSub)+'</p>'+
+    '<div class="grid"><div class="card"><div class="time">'+esc(t.amUnit)+'</div><p class="big">'+esc(t.amUnitV)+'</p></div></div>'+
+    '<h2>'+esc(w.h)+'</h2><div class="steps">'+w.steps.map(function(x){ return '<div class="step"><i></i><div><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div></div>'; }).join("")+'</div>'+
+    '<p class="hint">'+esc(w.tip)+'</p><div class="btns">'+btn(CFG.sciWorksheet,w.pdf,false)+'</div>'+
+    '<h2>'+esc(t.amG)+'</h2><div class="btns"><button class="btn tg'+(guideOpen?' on':'')+'" data-gtoggle="1">'+esc(guideOpen?g.btnClose:g.btnOpen)+'</button></div>'+
+    (guideOpen?guideHtml():'');
+}
+function vPM(){ var t=T();
+  var sl=["bn","en","ja"].map(function(l){ return btn(CFG.circle[l], L[l].name, l===lang); }).join("");
+  return '<h1>'+esc(t.pmT)+'</h1><p class="lead">'+esc(t.pmSub)+'</p>'+
+    '<div class="grid"><div class="card"><div class="time">'+esc(t.unit)+'</div><p class="big">'+esc(t.unitV)+'</p></div>'+
+    '<div class="card"><div class="time">'+esc(t.aim)+'</div><p class="big">'+esc(t.aimV)+'</p></div>'+
+    '<div class="card"><div class="time">'+esc(t.view)+'</div><p class="big">'+esc(t.viewV)+'</p></div></div>'+
+    '<h2>'+esc(t.slides)+'</h2><p>'+esc(t.slidesNote)+'</p><div class="btns">'+sl+'</div>'+
+    '<h2>'+esc(t.refl)+'</h2><p>'+esc(t.reflNote)+'</p><div class="btns">'+btn(CFG.reflection,t.refl,true)+'</div>';
+}
+function vEve(){ var t=T();
+  return '<h1>'+esc(t.eveT)+'</h1><p class="lead">'+esc(t.eveSub)+'</p>'+
+    '<h2>'+esc(t.eveTalk)+'</h2><ul class="pts big">'+t.eveP.map(function(p){return '<li>'+esc(p)+'</li>';}).join("")+'</ul>'+
+    '<h2>'+esc(t.eveQ)+'</h2><p class="big">'+esc(t.eveQB)+'</p><div class="btns"><button class="btn solid" data-go="q">'+esc(t.eveBtn)+'</button></div>';
+}
+function vKW(){ var t=T();
+  return '<h1>'+esc(t.kwT)+'</h1><p class="note">'+esc(t.kwNote)+'</p><dl class="kw">'+
+    t.kw.map(function(k){ return '<dt>'+esc(k.t)+'</dt><dd class="big">'+esc(k.d)+'</dd>'; }).join("")+'</dl>';
+}
+function vQ(){ var t=T();
+  var nameField = (CFG.names&&CFG.names.length)
+    ? '<select id="fName"><option value="">'+esc(t.fSel)+'</option>'+CFG.names.map(function(n){return '<option>'+esc(n)+'</option>';}).join("")+'</select>'
+    : '<input id="fName" type="text" autocomplete="name">';
+  var tg='<select id="fTarget"><option value="">'+esc(t.fSel)+'</option>'+TARGETS.map(function(x){return '<option value="'+x.id+'">'+esc(x[lang])+'</option>';}).join("")+'</select>';
+  return '<h1>'+esc(t.qT)+'</h1><p class="lead">'+esc(t.qLead)+'</p>'+(STANDALONE||!CFG.boardPage?'':'<div class="btns"><a class="btn" href="'+esc(CFG.boardPage)+'" target="_blank" rel="noopener">'+esc(t.sep)+' ↗</a></div>')+
+   '<div class="form"><label for="fName">'+esc(t.fName)+'</label>'+nameField+
+   '<label for="fTarget">'+esc(t.fTarget)+'</label>'+tg+
+   '<label for="fText">'+esc(t.fText)+'</label><textarea id="fText" lang="bn"></textarea><div class="hint">'+esc(t.fHint)+'</div>'+
+   '<div class="btns"><button class="btn solid" id="fSend">'+esc(t.fSend)+'</button></div><div class="msg" id="fMsg"></div></div>'+
+   '<h2>'+esc(t.boardT)+'</h2><p class="hint">'+esc(t.rxHint)+'</p><div class="chips" id="chips"></div><div id="board"></div><p class="hint">'+esc(t.refresh)+'</p>';
+}
+function pick(o,lg){   /* 日本語→日本語+小さく英語 / 英語→英語+小さくベンガル語 / ベンガル語→原文+小さく英語 */
+  var main, small, sl;
+  if(lg==="ja"){ main=o.text_ja||o.text; small=o.text_en; sl="EN"; }
+  else if(lg==="en"){ main=o.text_en||o.text; small=o.text; sl="BN"; }
+  else { main=o.text; small=o.text_en; sl="EN"; }
+  if(small===main) small="";
+  return {main:main, small:small, sl:sl};
+}
+function rxHtml(id){
+  var me=cid(), r=reacts[id]||{}, t=T();
+  return EMOJI.map(function(em){
+    var arr=r[em]||[], mine=arr.indexOf(me)>=0;
+    return '<button class="rx'+(mine?' mine':'')+'" data-rx="'+id+'|'+em+'" title="'+esc(t.rxTip[em])+'" aria-pressed="'+mine+'">'+em+'<span>'+(arr.length||"")+'</span></button>';
+  }).join("");
+}
+function threadHtml(id){
+  var t=T();
+  var rs=replies.filter(function(r){ return r.qid===id; });
+  var h='<div class="thread">'+rs.map(function(r){
+    var p=pick(r,lang);
+    return '<div class="rp"><div class="who">'+esc(r.name)+'</div><div class="m">'+esc(p.main)+'</div>'+(p.small?'<div class="s"><b>'+p.sl+'</b>'+esc(p.small)+'</div>':'')+'</div>';
+  }).join("");
+  var nm=(CFG.names&&CFG.names.length)
+    ? '<select data-rname="'+id+'"><option value="">'+esc(t.fSel)+'</option>'+CFG.names.map(function(n){return '<option'+(n===myName?' selected':'')+'>'+esc(n)+'</option>';}).join("")+'</select>'
+    : '<input data-rname="'+id+'" value="'+esc(myName)+'">';
+  h+='<div class="rform">'+nm+'<textarea data-rtext="'+id+'" lang="bn" placeholder="'+esc(t.rplPh)+'">'+esc(drafts[id]||"")+'</textarea>'+
+     '<button class="btn solid" data-rsend="'+id+'">'+esc(t.rplSend)+'</button><div class="rmsg" id="rm-'+id+'"></div></div></div>';
+  return h;
+}
+function renderBoardOnly(){
+  var t=T();
+  var ch='<button class="chip '+(!filter?"on":"")+'" data-f="">'+esc(t.all)+'</button>'+TARGETS.map(function(x){
+    return '<button class="chip '+(filter===x.id?"on":"")+'" data-f="'+x.id+'">'+esc(x[lang])+'</button>'; }).join("");
+  var c=document.getElementById("chips"); if(c) c.innerHTML=ch;
+  var list=notes.filter(function(n){ return !filter || n.target===filter; }).slice().reverse();
+  var b=document.getElementById("board"); if(!b) return;
+  if(!list.length){ b.innerHTML='<div class="empty">'+esc(t.none)+'</div>'; return; }
+  b.innerHTML=list.map(function(n){
+    var p=pick(n,lang), g=tgt(n.target);
+    var nr=replies.filter(function(r){ return r.qid===n.id; }).length;
+    return '<div class="q" style="--c:var('+g.c+')"><div class="who">'+esc(g[lang])+' · '+esc(n.name)+'</div><div class="m">'+esc(p.main)+'</div>'+
+      (p.small?'<div class="s"><b>'+p.sl+'</b>'+esc(p.small)+'</div>':'')+
+      '<div class="rx-row">'+rxHtml(n.id)+'<button class="rpl-btn'+(openThread[n.id]?' on':'')+'" data-rthread="'+n.id+'">💬 '+esc(t.rpl)+(nr?' · '+nr:'')+'</button></div>'+
+      (openThread[n.id]?threadHtml(n.id):'')+'</div>';
+  }).join("");
+}
+
+function render(){
+  renderSide();
+  var m=document.getElementById("main");
+  var v={home:vHome,ob:vOB,d24:vD24,am:vAM,pm:vPM,eve:vEve,q:vQ,kw:vKW}[tab]||vHome;
+  m.innerHTML=v()+'<div class="footer">'+esc(T().foot)+'</div>';
+  if(tab==="q") renderBoardOnly();
+}
+
+/* ═══════════════════ 操作 ═══════════════════ */
+document.addEventListener("click",function(e){
+  var b=e.target.closest("[data-l]"); if(b){ setLang(b.getAttribute("data-l")); return; }
+  b=e.target.closest("[data-t]"); if(b){ go(b.getAttribute("data-t")); return; }
+  b=e.target.closest("[data-go]"); if(b){ go(b.getAttribute("data-go")); return; }
+  b=e.target.closest("[data-gtoggle]"); if(b){ guideOpen=!guideOpen; render(); return; }
+  b=e.target.closest("[data-f]"); if(b){ filter=b.getAttribute("data-f"); renderBoardOnly(); return; }
+  b=e.target.closest("[data-rx]"); if(b){ react(b); return; }
+  b=e.target.closest("[data-rthread]"); if(b){ var id=b.getAttribute("data-rthread"); openThread[id]=!openThread[id]; renderBoardOnly(); return; }
+  b=e.target.closest("[data-rsend]"); if(b){ sendReply(b.getAttribute("data-rsend")); return; }
+  if(e.target.id==="fSend") send();
+});
+document.addEventListener("input",function(e){
+  var id=e.target.getAttribute && e.target.getAttribute("data-rtext"); if(id) drafts[id]=e.target.value;
+});
+document.addEventListener("change",function(e){
+  if(e.target.getAttribute && e.target.getAttribute("data-rname")!==null){ myName=e.target.value; try{localStorage.setItem("jp.name",myName);}catch(x){} }
+});
+function react(b){
+  var a=b.getAttribute("data-rx").split("|"), id=a[0], em=a[1], me=cid();
+  var r=reacts[id]=reacts[id]||{}, arr=r[em]=r[em]||[], i=arr.indexOf(me);
+  if(i>=0) arr.splice(i,1); else arr.push(me);
+  lastAct=Date.now(); renderBoardOnly();
+  var nb=document.querySelector('[data-rx="'+id+'|'+em+'"]'); if(nb){ nb.classList.add("pop"); }
+  if(CFG.gas){ gasPost({type:"react", qid:id, emoji:em, client:me}, function(){ setTimeout(function(){ lastAct=0; pull(); },900); }); }
+}
+function sendReply(id){
+  var t=T(), box=document.querySelector('[data-rtext="'+id+'"]'), nm=document.querySelector('[data-rname="'+id+'"]'), msg=document.getElementById("rm-"+id);
+  var name=(nm&&nm.value||"").trim(), text=(box&&box.value||"").trim();
+  if(!name||!text){ msg.textContent=t.rplNeed; return; }
+  myName=name; try{localStorage.setItem("jp.name",name);}catch(x){}
+  var done=function(r){
+    if(r&&r.ok){ drafts[id]=""; if(!CFG.gas){ replies.push({id:"r"+Date.now(),qid:id,name:name,text:text,text_en:"",text_ja:""}); } else { lastAct=0; setTimeout(pull,1500); } renderBoardOnly(); }
+    else msg.textContent=t.rplErr;
+  };
+  if(!CFG.gas){ done({ok:true}); return; }
+  gasPost({type:"reply", qid:id, name:name, text:text, lang:lang, client:cid()}, done);
+}
+function send(){
+  var t=T(), msg=document.getElementById("fMsg");
+  var name=(document.getElementById("fName").value||"").trim();
+  var target=document.getElementById("fTarget").value;
+  var text=(document.getElementById("fText").value||"").trim();
+  msg.className="msg";
+  if(name){ myName=name; try{localStorage.setItem("jp.name",name);}catch(e){} }
+  if(!name||!target||!text){ msg.className="msg err"; msg.textContent=t.fNeed; return; }
+  var btnE=document.getElementById("fSend"); btnE.disabled=true;
+  var done=function(r){
+    btnE.disabled=false;
+    if(r && r.ok){
+      msg.className="msg ok"; msg.textContent=t.fOk;
+      document.getElementById("fText").value="";
+      if(!CFG.gas){ notes.push({id:"l"+Date.now(),name:name,target:target,text:text,text_en:"",text_ja:""}); }
+      else setTimeout(pull,1500);
+      renderBoardOnly();
+    } else { msg.className="msg err"; msg.textContent=t.fErr; }
+  };
+  if(!CFG.gas){ done({ok:true}); return; }
+  gasPost({type:"q", name:name, target:target, text:text, lang:lang, client:cid()}, done);
+}
+function cid(){ try{ var k=localStorage.getItem("jp.cid"); if(!k){ k=Math.random().toString(36).slice(2,10); localStorage.setItem("jp.cid",k);} return k; }catch(e){ return ""; } }
+
+document.documentElement.lang=lang; document.body.setAttribute("data-lang",lang);
+render(); pull(); pollT=setInterval(pull,6000);
+window.addEventListener("hashchange",function(){ if(STANDALONE) return; var t=(location.hash||"").replace("#",""); if(t && t!==tab){ tab=t; render(); } });
+</script>
+</body>
+</html>
