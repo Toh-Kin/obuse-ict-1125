@@ -49,6 +49,8 @@ p{margin:8px 0;color:var(--dim)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:16px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:0 1px 0 rgba(74,46,31,.05)}
 .card h3{margin-top:0}
+.boe .card{margin:12px 0}.boe .gh{margin:18px 0 6px}.boe .bl{margin:6px 0 0;padding-left:1.2em}.boe .bl li{margin:5px 0;line-height:1.7}.boe .tagc{font-size:12px;font-weight:600;background:var(--card2);color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:2px 10px;vertical-align:middle;margin-left:6px}.boe .ictc{border-left:4px solid var(--acc)}
+
 .card.link{cursor:pointer;transition:.15s}
 .card.link:hover{border-color:var(--acc);transform:translateY(-1px)}
 .time{color:var(--acc);font-weight:700;font-size:14px;letter-spacing:.03em}
@@ -391,8 +393,73 @@ function vOB(){
   if(o.note) h+='<p class="hint">'+esc(o.note)+'</p>';
   return h;
 }
+
+var BOE = {
+ja:{ h:"25日午前 小布施町教育委員会パート", tag:"参考資料",
+ lead:"小布施町教育委員会が目指す教育の方向性と、その中でのICT活用についての参考資料です(当日の説明原稿を整理したものです)。",
+ aimH:"町教委が目指していること",
+ aim:["エージェンシー(自分で目標を決め、考え、主体的に行動する力)を育む、幼保小中一貫の教育をめざしています。","幼保小中で共通の研究テーマを掲げ、各園・学校がそれぞれの実践を進めています。"],
+ whyH:"なぜ「見える化」のサイトをつくったか",
+ why:["教職員が互いの授業や保育を実際に見合って学べるよう、参観の機会をできるだけ確保しています(校内研修・授業研究など)。","しかし現実には、十分な機会をつくることが難しい状況です。","そこで今年度、各園・学校の実践を可視化して共有するため、教育委員会が「小布施町幼保小中一貫教育サイト」を作成しました。"],
+ siteH:"サイトのつくり",
+ site:["トップページのみのシンプルな構成で、町内の園・学校の関係者だけに公開しています。","全体のグランドデザインと、各園・学校の年間指導計画・保育計画にリンクしています。","計画の中の青い下線部から、指導案・学習資料・振り返り・活動のドキュメンテーションなど、実践の記録を見ることができます。"],
+ exH:"サイトの中身(例)",
+ ex:[["保育園","年間保育計画からリンクをたどると、具体的な活動の様子を写真やコメントでまとめたドキュメンテーションが見られます。"],
+     ["小学校 6年算数","算数の教科担任が、全単元を児童が自由進度で学べるよう準備し、実践を公開。「図形の拡大と縮小」では、デジタル教科書の解説動画、AIを活用して教師が自作した動画、学びの手引き、練習問題・振り返りがそろっています。(25日午後の参観授業につながる取組)"],
+     ["中学校 家庭科","単元「衣服の手入れと補修にトライ!」では、指導案にあたる「授業構想カード」と、研究主任がまとめた「授業だより」を共有。さらに授業者が自作したWebサイトで、生徒が自由進度で学べるようにしています。"]],
+ ictH:"ICT活用の観点から見ると",
+ ict:["自由進度学習を支える教材:デジタル教科書の解説動画、AIを使って教師が自作した動画、「学びの手引き」。","中学校の自作サイト:ホームに「学習の手引き」で単元の見通しを示し、トライ1〜4と発展課題で構成。各トライに課題・追究のポイントと手順・確認テスト・既習事項の確認動画・課題解決を支える動画を用意。","教職員の学び合い:時間や場所の制約を超えて、他校種の実践を見られる。ICTは「授業を変える道具」であると同時に「学び合いを広げる道具」として使われています。"],
+ effH:"期待している効果",
+ eff:["経年の教育実践の蓄積と引き継ぎ","授業力・指導力の向上と、校種を超えた協働の活性化","幼保小、小中の学びのスムーズな接続","校園種ごとの教育文化や考え方の相互理解"],
+ note:"※ 出典:小布施町教育委員会の説明原稿(日本語・英語)をもとに整理。ベンガル語は原稿の訳をそのまま掲載しており、内容の確認はこれからです。" },
+en:{ h:"25 Nov Morning: Obuse Town Board of Education", tag:"Reference",
+ lead:"Reference material on the direction of education that the Obuse Town Board of Education is aiming for, and on how ICT is used within it (organised from the Board’s presentation script).",
+ aimH:"What the Board is aiming for",
+ aim:["Integrated early childhood, elementary and junior high education that fosters learner agency (the ability to set one’s own goals, think for oneself and take action on one’s own initiative).","With a common research theme from preschool to junior high, each preschool and school advances its own practice."],
+ whyH:"Why a “visualisation” website was created",
+ why:["The Board tries to give teachers as many chances as possible to learn by observing each other’s lessons and activities (in-house training, lesson study).","In reality, it is difficult to secure enough such opportunities.","So this school year the Board created the “Obuse Town Integrated Early Childhood, Elementary and Junior High Education Website” to make each institution’s practice visible and shared."],
+ siteH:"How the site is built",
+ site:["A simple, top-page-only design, open only to members of the town’s preschools and schools.","It links to the overall vision and to each institution’s annual teaching or childcare plan.","The blue underlined links in each plan lead to records of practice: lesson plans, learning materials, reflections and documentation of activities."],
+ exH:"What you find in it (examples)",
+ ex:[["Nursery school","From the annual childcare plan, links lead to documentation of specific activities, with photos and comments."],
+     ["Elementary, Grade 6 maths","The maths subject teacher prepares every unit for self-paced learning and makes it visible. In “Enlarging and Reducing Shapes” you find digital-textbook explanation videos, videos the teacher made with AI, a learning guide, and practice exercises and reflections. (Linked to the lesson you observe on the afternoon of 25 Nov.)"],
+     ["Junior high, Home economics","For “Let’s Try Caring for and Mending Clothes!”, the “Lesson Design Card” (lesson plan) and the “Lesson Newsletter” by the research coordinator are shared, plus a website made by the teacher so students can learn at their own pace."]],
+ ictH:"From the ICT point of view",
+ ict:["Materials that support self-paced learning: digital-textbook explanation videos, teacher-made AI-assisted videos, and a “learning guide”.","The junior high teacher’s own site: the home page shows a “learning guide” with the unit roadmap, followed by Try 1–4 and an extension task. Each Try offers the task, key points and steps, a check-up quiz, a review video and videos supporting independent problem solving.","Teachers learning from each other: staff can see practice from other school levels beyond limits of time and place. ICT is used both to change lessons and to widen professional learning."],
+ effH:"Expected effects",
+ eff:["Accumulating practice over the years and handing it on","Better teaching skills and collaboration across school levels","Smoother transitions: early childhood → elementary → junior high","Mutual understanding of each school level’s culture and approach"],
+ note:"Source: organised from the Obuse Town Board of Education’s script (Japanese and English). The Bengali is the script’s translation as provided and has not yet been checked." },
+bn:{ h:"25 নভেম্বর সকাল: ওবুসে টাউন শিক্ষা বোর্ড", tag:"রেফারেন্স",
+ lead:"ওবুসে টাউন শিক্ষা বোর্ড শিক্ষার যে দিকে এগোতে চায় এবং তার মধ্যে ICT-এর ব্যবহার সম্পর্কিত রেফারেন্স উপকরণ (বোর্ডের উপস্থাপনা-পাঠ থেকে সাজানো)।",
+ aimH:"বোর্ডের লক্ষ্য",
+ aim:["শিশুদের নিজস্ব উদ্যোগে চিন্তা ও কাজ করার সক্ষমতা (এজেন্সি) বিকাশের লক্ষ্যে প্রাক্‌-প্রাথমিক থেকে নিম্ন মাধ্যমিক পর্যন্ত সমন্বিত শিক্ষা।","অভিন্ন গবেষণা-বিষয়কে কেন্দ্র করে প্রতিটি স্কুল ও প্রাক্‌-প্রাথমিক প্রতিষ্ঠান নিজ নিজ শিক্ষাচর্চা এগিয়ে নিচ্ছে।"],
+ whyH:"কেন “দৃশ্যমান করার” ওয়েবসাইট তৈরি হলো",
+ why:["শিক্ষকেরা যাতে একে অপরের পাঠ ও কার্যক্রম সরাসরি দেখে শিখতে পারেন, সে জন্য বোর্ড যতটা সম্ভব সুযোগ তৈরির চেষ্টা করে (ইন-হাউস প্রশিক্ষণ, পাঠ-গবেষণা)।","বাস্তবে পর্যাপ্ত সুযোগ তৈরি করা কঠিন।","তাই চলতি শিক্ষাবর্ষে প্রতিটি প্রতিষ্ঠানের শিক্ষাচর্চা দৃশ্যমান ও ভাগ করে নেওয়ার জন্য “ওবুসে টাউন সমন্বিত প্রাক্‌-প্রাথমিক, প্রাথমিক ও নিম্ন মাধ্যমিক শিক্ষা ওয়েবসাইট” তৈরি করা হয়েছে।"],
+ siteH:"সাইটের কাঠামো",
+ site:["শুধু একটি মূল পৃষ্ঠা নিয়ে সহজ কাঠামো; কেবল শহরের স্কুল ও প্রাক্‌-প্রাথমিক প্রতিষ্ঠানের সদস্যদের জন্য উন্মুক্ত।","সামগ্রিক রূপরেখা এবং প্রতিটি প্রতিষ্ঠানের বার্ষিক পাঠদান বা শিশু পরিচর্যা পরিকল্পনার লিংক আছে।","পরিকল্পনার নীল আন্ডারলাইন করা লিংক থেকে পাঠ পরিকল্পনা, শিক্ষাসামগ্রী, পর্যালোচনা ও কার্যক্রমের নথি দেখা যায়।"],
+ exH:"সাইটে কী আছে (উদাহরণ)",
+ ex:[["প্রাক্‌-প্রাথমিক","বার্ষিক শিশু পরিচর্যা পরিকল্পনার লিংক থেকে ছবি ও মন্তব্যসহ নির্দিষ্ট কার্যক্রমের নথি দেখা যায়।"],
+     ["প্রাথমিক, ষষ্ঠ শ্রেণির গণিত","গণিতের বিষয়শিক্ষক প্রতিটি পাঠ-একক নিজ গতিতে শেখার উপযোগী করে প্রস্তুত করেন ও দৃশ্যমান করেন। “জ্যামিতিক আকৃতির বড় ও ছোট করা” এককে আছে ডিজিটাল পাঠ্যবইয়ের ভিডিও, শিক্ষকের এআই-সহায়তায় তৈরি ভিডিও, শেখার নির্দেশিকা এবং অনুশীলনী ও পর্যালোচনা। (25 নভেম্বর বিকেলের পর্যবেক্ষণ ক্লাসের সঙ্গে সম্পর্কিত।)"],
+     ["নিম্ন মাধ্যমিক, গার্হস্থ্য বিজ্ঞান","“চলো, পোশাকের যত্ন ও মেরামতের চেষ্টা করি!” এককে “পাঠ পরিকল্পনা কার্ড” ও “পাঠ-সংবাদ” ভাগ করা হয়েছে, সঙ্গে শিক্ষকের নিজের তৈরি ওয়েবসাইট, যাতে শিক্ষার্থীরা নিজ গতিতে শিখতে পারে।"]],
+ ictH:"ICT ব্যবহারের দৃষ্টিকোণ থেকে",
+ ict:["নিজ গতিতে শেখায় সহায়ক উপকরণ: ডিজিটাল পাঠ্যবইয়ের ব্যাখ্যামূলক ভিডিও, এআই-সহায়তায় শিক্ষকের তৈরি ভিডিও, “শেখার নির্দেশিকা”।","নিম্ন মাধ্যমিকের নিজস্ব সাইট: মূল পৃষ্ঠায় “শেখার নির্দেশিকা”, তারপর প্রচেষ্টা ১–৪ ও অগ্রসর কাজ। প্রতিটিতে কাজ, মূল বিষয় ও ধাপ, যাচাই পরীক্ষা, পুনরালোচনার ভিডিও এবং সমস্যা সমাধানে সহায়ক ভিডিও থাকে।","শিক্ষকদের পারস্পরিক শেখা: সময় ও স্থানের সীমা ছাড়িয়ে অন্য স্তরের শিক্ষাচর্চা দেখা যায়।"],
+ effH:"প্রত্যাশিত সুফল",
+ eff:["বছরের পর বছর শিক্ষাচর্চা সংরক্ষণ ও হস্তান্তর","পাঠদান দক্ষতা উন্নত করা এবং বিভিন্ন স্তরের মধ্যে সহযোগিতা বাড়ানো","প্রাক্‌-প্রাথমিক → প্রাথমিক → নিম্ন মাধ্যমিকে শেখার ধারাবাহিকতা","প্রতিটি স্তরের শিক্ষাসংস্কৃতি ও দৃষ্টিভঙ্গি সম্পর্কে পারস্পরিক বোঝাপড়া"],
+ note:"সূত্র: ওবুসে টাউন শিক্ষা বোর্ডের উপস্থাপনা-পাঠ (জাপানি ও ইংরেজি) থেকে সাজানো। বাংলা অংশ পাঠের অনুবাদ থেকে নেওয়া এবং এখনো যাচাই করা হয়নি।" }
+};
+function boeHtml(){ var b=BOE[lang];
+  function ul(a){ return '<ul class="bl">'+a.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul>'; }
+  return '<div class="boe"><h2>'+esc(b.h)+' <span class="tagc">'+esc(b.tag)+'</span></h2><p class="lead">'+esc(b.lead)+'</p>'+
+   '<div class="card"><h3>'+esc(b.aimH)+'</h3>'+ul(b.aim)+'</div>'+
+   '<div class="card"><h3>'+esc(b.whyH)+'</h3>'+ul(b.why)+'</div>'+
+   '<div class="card"><h3>'+esc(b.siteH)+'</h3>'+ul(b.site)+'</div>'+
+   '<h3 class="gh">'+esc(b.exH)+'</h3><div class="grid">'+b.ex.map(function(e,i){ return '<div class="card"><div class="time">'+esc(e[0])+'</div><p>'+esc(e[1])+'</p></div>'; }).join("")+'</div>'+
+   '<div class="card ictc"><h3>'+esc(b.ictH)+'</h3>'+ul(b.ict)+'</div>'+
+   '<div class="card"><h3>'+esc(b.effH)+'</h3><ol class="bl">'+b.eff.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ol></div>'+
+   '<p class="hint">'+esc(b.note)+'</p></div>';
+}
 function vD24(){ var t=T();
-  return '<h1>'+esc(t.d24T)+'</h1><p class="lead">'+esc(t.d24Sub)+'</p><p class="big">'+esc(t.d24Body)+'</p><div class="btns">'+btn(CFG.day24,t.d24Btn,true)+'</div>';
+  return '<h1>'+esc(t.d24T)+'</h1><p class="lead">'+esc(t.d24Sub)+'</p><p class="big">'+esc(t.d24Body)+'</p><div class="btns">'+btn(CFG.day24,t.d24Btn,true)+'</div>'+boeHtml();
 }
 function guideHtml(G, origUrl){
   var g=G[lang], h='';
